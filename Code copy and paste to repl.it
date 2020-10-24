@@ -1,0 +1,71 @@
+import java.util.Scanner;
+import javax.lang.model.util.ElementScanner6;
+class Main {
+  public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      double CA; //Current assets
+      double CL; //Current liabilities
+      double PS; //preferd shares
+      double CAV; //Current asset value
+      double SALES; // sales
+      double MOP; //margin of profit
+      double OE; //operating expenses
+      double GP; //gross profit
+      double OI; //operating income
+      double COGS; //cost of goods sold
+      double TR; // total revenue
+      double GPM; //gross profit margin
+      double CR; //Current ratio
+      double WC; //work capital
+      
+      String CN; // company name
+      System.out.println("Company name ");
+      CN = keyboard.nextLine();
+
+      System.out.println("Current assets ");
+      CA = keyboard.nextDouble();
+     
+      System.out.println("Current liabilities ");
+      CL = keyboard.nextDouble();
+     
+      System.out.println("preferd shares ");
+      PS = keyboard.nextDouble();
+     
+      System.out.println("sales ");
+      SALES = keyboard.nextDouble();
+      
+      System.out.println("cost of goods sold ");
+      COGS = keyboard.nextDouble();
+     
+      System.out.println("total revenue ");
+      TR = keyboard.nextDouble();
+
+      System.out.println("Operating expenses ");
+      OE = keyboard.nextDouble();
+
+      WC = (CA - CL);
+      CR = (CA / CL);
+      CAV = (CA - (CL + PS));
+      GP = (TR - COGS);
+      OI = (OE - GP);
+      MOP = (OI / SALES)*100;
+      GPM = ((SALES - COGS)/SALES);
+     
+     System.out.println(CN);
+     System.out.println("Current assets $" + CA);
+     System.out.println("Current liabilities $" + CL);
+     System.out.println("preferd shares " + PS);
+     System.out.println("current asset Value $" + CAV);
+     System.out.println("sales $" + SALES);
+     System.out.println("Margin of profit " + MOP + "%");
+     System.out.println("Operating expenses $" + OE);
+     System.out.println("gross profit $" + GP);
+     System.out.println("operating income $" + OI);
+     System.out.println("cost of goods sold " + COGS );
+     System.out.println("total revenue " + TR);
+     System.out.println("gross profit margin " + GPM);
+     System.out.println("current ratio " + CR);
+     System.out.println("work capital " + WC);
+     
+   }
+}
